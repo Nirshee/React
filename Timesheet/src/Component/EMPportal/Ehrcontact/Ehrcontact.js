@@ -10,7 +10,7 @@ const EHrInfo = () => {
 
     const { Sider } = Layout;
     const [page, setPage] = useState(1);
-    const [pageSize, setPageSize] = useState(8);
+    const [pageSize, setPageSize] = useState(10);
     const [filteredClient, setFilteredClient] = useState([]);
     const navigate = useNavigate();
     const navig = () => {
@@ -86,6 +86,9 @@ const EHrInfo = () => {
                 }}
                 size="middle"
                 bordered
+                scroll={{
+                      y: 150
+                 }}
             />
             <div style={{marginLeft:"90%",position:"fixed"}}>
             <Popover position="top" content='Logout'>
